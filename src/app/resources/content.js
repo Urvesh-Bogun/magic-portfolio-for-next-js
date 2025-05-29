@@ -6,7 +6,7 @@ const person = {
   },
   role: "Cybersecurity Analyst",
   myavatar: "/images/myavatar.jpg",
-  email: "contact@urveshbogun.com",
+  email: "urvesh.bogun@gmail.com",
   location: "Europe/London", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: [], // optional: Leave the array empty if you don't want to display languages
 };

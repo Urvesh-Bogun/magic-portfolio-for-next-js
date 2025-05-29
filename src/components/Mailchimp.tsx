@@ -80,7 +80,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
       </Text>
       <Button
         style={{ position: "relative" }}
-        href="mailto:contact@urveshbogun.com"
+        href="mailto:urvesh.bogun@gmail.com"
         size="l"
         variant="primary"
         label="Get in touch"
