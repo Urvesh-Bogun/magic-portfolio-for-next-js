@@ -16,7 +16,6 @@ import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
 import React from "react";
 import { Meta, Schema } from "@/once-ui/modules";
-import { Certificate } from "crypto";
 
 export async function generateMetadata() {
   return Meta.generate({
