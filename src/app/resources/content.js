@@ -1,6 +1,3 @@
-import { Logo } from "@/once-ui/components";
-import { Certificate } from "crypto";
-
 const person = {
   firstName: "Urvesh",
   lastName: "Bogun",
