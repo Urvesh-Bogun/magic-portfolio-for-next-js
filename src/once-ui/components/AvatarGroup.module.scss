@@ -1,8 +1,8 @@
-.avatarGroup {
+.myavatarGroup {
     z-index: 0;
 }
 
-.avatar {
+.myavatar {
     margin-left: calc(-1 * var(--static-space-8));
 
     &:first-child {

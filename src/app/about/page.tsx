@@ -16,6 +16,7 @@ import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
 import React from "react";
 import { Meta, Schema } from "@/once-ui/modules";
+import { Certificate } from "crypto";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -45,6 +46,11 @@ export default function About() {
       items: about.studies.institutions.map((institution) => institution.name),
     },
     {
+      title: about.certifications.title,
+      display: about.certifications.display,
+      items: about.certifications.certificates.map((certificate) => certificate.name),
+    },
+    {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
@@ -62,7 +68,7 @@ export default function About() {
         author={{
           name: person.name,
           url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
+          image: `${baseURL}${person.myavatar}`,
         }}
       />
       {about.tableOfContent.display && (
@@ -78,9 +84,9 @@ export default function About() {
         </Column>
       )}
       <Flex fillWidth mobileDirection="column" horizontal="center">
-        {about.avatar.display && (
+        {about.myavatar.display && (
           <Column
-            className={styles.avatar}
+            className={styles.myavatar}
             position="sticky"
             minWidth="160"
             paddingX="l"
@@ -89,7 +95,7 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xl" />
+            <Avatar src={person.myavatar} size="xl" />
             <Flex gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
@@ -246,20 +252,101 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && (
+{about.studies.display && (
+  <>
+    <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+      {about.studies.title}
+    </Heading>
+    <Column fillWidth gap="l" marginBottom="40">
+      {about.studies.institutions.map((institution, index) => (
+        <Column key={`${institution.name}-${index}`} fillWidth>
+          <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+            <Text id={institution.name} variant="heading-strong-l">
+              {institution.name}
+            </Text>
+            {institution.date && (
+              <Text variant="heading-default-xs" onBackground="neutral-weak">
+                {institution.date}
+              </Text>
+            )}
+          </Flex>
+
+          <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+            {institution.description}
+          </Text>
+
+          {institution.modules && institution.modules.length > 0 && (
             <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
+              <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="xs">
+                Relevant Modules:
+              </Text>
+              <Column as="ul" gap="8">
+                {institution.modules.map((module, moduleIndex) => (
+                  <Text
+                    as="li"
+                    variant="body-default-m"
+                    key={`${institution.name}-module-${moduleIndex}`}
+                  >
+                    {module}
+                  </Text>
+                ))}
+              </Column>
+            </>
+          )}
+        </Column>
+      ))}
+    </Column>
+  </>
+)}
+
+
+          {about.certifications.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.certifications.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.certifications.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
+                {about.certifications.certificates.map((cert, index) => (
+                  <Column key={`${cert.name}-${index}`} fillWidth gap="4">
+                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                      {cert.link ? (
+                      <Text
+                        id={cert.name}
+                        variant="heading-strong-l"
+                        as="a"
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                          cursor: "pointer",
+                          whiteSpace: "pre-line",
+                        }}
+                      >
+                        {cert.name}
+                      </Text>
+                      ) : (
+                        <Text id={cert.name} variant="heading-strong-l">
+                          {cert.name}
+                        </Text>
+                      )}
+                      {cert.date && (
+                        <Text variant="heading-default-xs" onBackground="neutral-weak">
+                          {cert.date}
+                        </Text>
+                      )}
+                    </Flex>
+                    {cert.issuer && (
+                      <Text variant="body-default-s" onBackground="brand-weak">
+                        {cert.issuer}
+                      </Text>
+                    )}
                   </Column>
                 ))}
               </Column>

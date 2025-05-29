@@ -1,25 +1,25 @@
 import { Logo } from "@/once-ui/components";
+import { Certificate } from "crypto";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Urvesh",
+  lastName: "Bogun",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Cybersecurity Analyst",
+  myavatar: "/images/myavatar.jpg",
+  email: "contact@urveshbogun.com",
+  location: "Europe/London", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Let’s connect</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Whether you're a recruiter or fellow tech enthusiast — let’s start a conversation.
     </>
   ),
 };
@@ -30,17 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Urvesh-Bogun",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    link: "https://www.linkedin.com/in/urvesh-bogun/",
   },
   {
     name: "Email",
@@ -55,16 +50,15 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Bridging the gap between innovation and secure design</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Current project: <strong className="ml-4">Spenny - a Buy Now Pay Later Behavoral Tracker</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Hi. I'm Urvesh Bogun, it's nice to meet you.
     </>
   ),
 };
@@ -78,7 +72,7 @@ const about = {
     display: true,
     subItems: false,
   },
-  avatar: {
+  myavatar: {
     display: true,
   },
   calendar: {
@@ -90,106 +84,130 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <p>
+          I am currently pursuing an MSci in Computer Science with Information Security at Royal Holloway, University of London.
+          My goal is to leverage cloud technologies to build secure and innovative solutions that have a real-world impact.
+        </p>
+
+        <p>
+          Whether I’m assisting in reducing cloud vulnerabilities or sharpening my DevSecOps skills, I’m always committed to
+          continuous learning, hands-on experimentation, and staying deeply engaged in the tech space.
+        </p>
+
+        <p>
+          As a volunteer cybersecurity analyst, I have gained a deep understanding of AWS architecture and have assisted
+          in fostering a security-first culture. I am driven by my continuous enthusiasm for the field.
+        </p>
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Volunteer Cybersecurity Analyst",
+        timeframe: "May 2022 - Present",
+        role: "Space Startup (NDA)",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Currently awaiting full environment setup to take on SOC Analyst role
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Successfully prevented  5+ phishing attacks by blocking emails as Gmail admin and educating staff
           </>,
+          <>
+            Provided AWS security improvent suggestions, like Amazon Macie to help defend against DLP
+          </>,
+          <>
+            Created security documentation aligned with OWASP standards, helping to promote a safety-first company mindset and reduce common vulnerabilities
+          </>,
+          
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "MSci Computer Science with Information Security",
+        description: "Royal Holloway, University of London",
+        date: "2022 – 2026",
+        modules: [
+          "Introduction to Information Security",
+          "Applications of Cryptography",
+          "Critical Infrastructure Security",
+          "Computer and Network Security",
+          "Digital Forensics",
+        ],
+      },
+    ],
+  },
+  certifications: {
+    display: true,
+    title: "Certifications",
+    certificates: [
+      {
+        name: "Security+",
+        issuer: "CompTIA",
+        date: "currently pursuing",
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Solutions Architecture Job Simulation",
+        issuer: "AWS",
+        date: "2025",
+      },
+      {
+        name: "Cybersecurity Analyst Job Simulation",
+        issuer: "Tata Group",
+        date: "2025",
+      },
+      {
+        name: "Microsoft Security, Compliance, and Identity Fundamentals",
+        issuer: "ExamPro Training Inc.",
+        date: "2025",
+      },
+      {
+        name: "Certified in Cybersecurity (CC)",
+        issuer: "ISC2",
+        date: "2025",
+        link: "https://www.isc2.org/Certifications/CC"
+      },
+      {
+        name: "Introduction to Cisco Packet Tracer",
+        issuer: "Cisco",
+        date: "2024",
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Programming",
+        description: <>Java, SQL, Python</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Cloud Security",
+        description: <>AWS</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        ],
+      },
+      {
+        title: "Networking",
+        description: <>Design, Implementation, and Troubleshooting</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
         ],
       },
     ],
@@ -199,7 +217,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about cybersecurity and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route

@@ -12,16 +12,16 @@ interface UserProps {
   tag?: string;
   tagProps?: TagProps;
   loading?: boolean;
-  avatarProps?: AvatarProps;
+  myavatarProps?: AvatarProps;
   className?: string;
 }
 
 const User = forwardRef<HTMLDivElement, UserProps>(
   (
-    { name, children, subline, tagProps = {}, loading = false, avatarProps = {}, className },
+    { name, children, subline, tagProps = {}, loading = false, myavatarProps = {}, className },
     ref,
   ) => {
-    const { src, value, empty, ...restAvatarProps } = avatarProps;
+    const { src, value, empty, ...restAvatarProps } = myavatarProps;
     const isEmpty = empty || (!src && !value);
 
     return (

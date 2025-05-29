@@ -49,9 +49,9 @@ export default async function Blog({
     notFound();
   }
 
-  const avatars =
+  const myavatars =
     post.metadata.team?.map((person) => ({
-      src: person.avatar,
+      src: person.myavatar,
     })) || [];
 
   return (
@@ -71,7 +71,7 @@ export default async function Blog({
             author={{
               name: person.name,
               url: `${baseURL}${about.path}`,
-              image: `${baseURL}${person.avatar}`,
+              image: `${baseURL}${person.myavatar}`,
             }}
           />
           <Button data-border="rounded" href="/blog" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
@@ -79,7 +79,7 @@ export default async function Blog({
           </Button>
           <Heading variant="display-strong-s">{post.metadata.title}</Heading>
           <Row gap="12" vertical="center">
-            {avatars.length > 0 && <AvatarGroup size="s" avatars={avatars} />}
+            {myavatars.length > 0 && <AvatarGroup size="s" myavatars={myavatars} />}
             <Text variant="body-default-s" onBackground="neutral-weak">
               {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
             </Text>

@@ -63,9 +63,9 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
           shape="circle"
           width={typeof size === "number" ? "m" : size}
           height={typeof size === "number" ? "m" : size}
-          className={`${styles.avatar} ${className}`}
+          className={`${styles.myavatar} ${className}`}
           aria-busy="true"
-          aria-label="Loading avatar"
+          aria-label="Loading myavatar"
         />
       );
     }
@@ -79,7 +79,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
             size="m"
             style={typeof size === "number" ? { fontSize: `${size}rem` } : undefined}
             className={styles.icon}
-            aria-label="Empty avatar"
+            aria-label="Empty myavatar"
           />
         );
       }
@@ -124,7 +124,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         border="neutral-strong"
         background="surface"
         style={sizeStyle}
-        className={`${styles.avatar} ${typeof size === "string" ? styles[size] : ""} ${className || ""}`}
+        className={`${styles.myavatar} ${typeof size === "string" ? styles[size] : ""} ${className || ""}`}
         {...rest}
       >
         {renderContent()}

@@ -1,0 +1,82 @@
+---
+title: "Secure Coding Practices Every Developer Should Follow"
+summary: "A guide to writing secure code by following coding practices based OWASP guidlines"
+publishedAt: "2025-05-29"
+tag: "Secure Coding"
+---
+
+## Secure Coding
+
+Secure coding is writing code that protects against security issues.
+
+## 1. Input Validation
+
+**Why:** Prevents SQL injection, XSS, buffer overflows.
+
+**What to do:** Ensure all user inputs are clean, expected, and safe:
+
+- Validate on both client and server  
+- Use whitelisting  
+- Sanitise inputs
+
+## 2. Secure Communication
+
+**Why:** Stops data interception in transit.
+
+**What to do:** Enforce secure data transmission:
+
+- Enforce HTTPS in your app logic
+- Use secure HTTP clients 
+- Validate certificates in code
+
+## 3. Use Trusted Libraries & Frameworks
+
+**Why:** Reduces the risk of bugs and vulnerabilities.
+
+**What to do:** Use secure, maintained libraries:
+
+- Pick well-supported libraries
+- Regularly update dependencies
+- Use tools to scan for dependency vulnerabilities
+
+## 4. Authentication & Authorisation
+
+**Why:** Prevents unauthorised access.
+
+**What to do:** Implement identity and access checks:
+
+- Check permissions in backend, not just frontend
+- Apply least privilege logic in code
+
+## 5. Password Handling
+
+**Why:** Prevents account takeovers.
+
+**What to do:** Code should never store passwords insecurely:
+
+- Hash passwords 
+- Use salts
+- Never log or store plain-text passwords
+
+## 6. Avoid Hardcoded Secrets
+
+**Why:** Prevents credential leaks.
+
+**What to do:** Never include API keys, credentials, or secrets directly in your code:
+
+- Use environment variables in your code
+- Load secrets securely at runtime
+
+## 7. Error Handling & Logging
+
+**Why:** Prevents info leaks to users or logs.
+
+**What to do:** Handle and log errors securely in code:
+
+- Return generic error messages to users
+- Log internally with context but mask sensitive info
+- Avoid stack traces or database errors in responses
+
+## Conclusion
+
+Security starts in the code. These practices help prevent vulnerabilities before they become real threats.

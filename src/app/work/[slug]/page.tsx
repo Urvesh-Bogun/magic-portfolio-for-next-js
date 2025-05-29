@@ -50,9 +50,9 @@ export default async function Project({
     notFound();
   }
 
-  const avatars =
+  const myavatars =
     post.metadata.team?.map((person) => ({
-      src: person.avatar,
+      src: person.myavatar,
     })) || [];
 
   return (
@@ -69,7 +69,7 @@ export default async function Project({
         author={{
           name: person.name,
           url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
+          image: `${baseURL}${person.myavatar}`,
         }}
       />
       <Column maxWidth="xs" gap="16">
@@ -89,7 +89,7 @@ export default async function Project({
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <Flex gap="12" marginBottom="24" vertical="center">
-          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
+          {post.metadata.team && <AvatarGroup reverse myavatars={myavatars} size="m" />}
           <Text variant="body-default-s" onBackground="neutral-weak">
             {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
           </Text>
