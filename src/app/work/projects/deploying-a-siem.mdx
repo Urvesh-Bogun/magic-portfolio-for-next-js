@@ -35,9 +35,12 @@ This project involved deploying a lightweight SIEM (Security Information and Eve
 
 ## Challenges and Learnings
 
-Initially, the laptop in my network wasn’t receiving an IP address. After checking the DHCP settings on the server, I realised the IP address didn’t match the router’s subnet. This stopped IP allocation.
+- Learned how to configure **log collection agents** and ensure logs were properly ingested into Sentinel
 
-I resolved the issue by updating the DHCP pool to match the router's network range and restarting the DHCP service. After this fix, all devices received valid IP addresses.
+- Gained exposure to **KQL** for building alert queries and tuning false positives
+
+- Understood the **basics of threat detection** pipelines within a modern cloud SIEM platform
+
 
 ## Outcome
 
