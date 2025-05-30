@@ -50,7 +50,7 @@ const home = {
   headline: <>Bridging the gap between innovation and secure design</>,
   featured: {
     display: true,
-    title: <>Current project: <strong className="ml-4">Spendy - a Buy Now Pay Later Behavoral Tracker</strong></>,
+    title: <>Current project: <strong className="ml-4">Spendy - A Buy Now Pay Later Behavoral Tracker</strong></>,
     href: "https://www.linkedin.com/company/spendy/",
   },
   subline: (
