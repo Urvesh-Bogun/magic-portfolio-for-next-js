@@ -1,0 +1,58 @@
+---
+title: "Hollomon – Gotta Cache 'Em All!"
+publishedAt: "2024-03-24"
+summary: "A Java client that connects to a remote trading card game server to buy, sell, and collect ranked cards using a custom binary protocol."
+images:
+team:
+  - name: "John Doe"
+    role: "Software Engineer"
+    myavatar: "/images/myavatar.jpg"
+    linkedIn: "https://github.com/Urvesh-Bogun/hollomon"
+link: 
+---
+
+## Overview
+
+Hollomon is a command-line Java client for a network-based trading card game hosted on a centralized server. Players connect, authenticate, and receive a random card on login. The client can then execute commands like CREDITS, BUY, SELL, and CARDS to interact with the live game server.
+
+## Key Features
+
+- **Socket-based connection** to a live server over a port
+
+- **Secure login system** using username and password
+
+- **Dynamic card inventory** fetched from the server after login
+
+- **Custom Card and Rank types** implementing equality and ordering logic
+
+- **Client commands** like BUY, SELL, and CARDS handled using buffered streams
+
+- **Sorted card collection** using Comparable implementation and Collections.sort
+
+## Technologies Used
+
+- **Java**
+
+- **Socket programming** (java.net.Socket)
+
+- **Streams & I/O**: BufferedReader, BufferedWriter, InputStream, OutputStream
+
+- **Object-oriented principles**: Enums, custom comparators, stream wrappers
+
+## Challenges and Learnings
+
+- Gained experience in building clients that communicate with a custom binary/text protocol
+
+- Learned how to properly manage stream-based communication and avoid deadlocks or hanging reads
+
+- Practiced object equality and sorting logic through equals(), hashCode(), and compareTo()
+
+- Resolved challenges around authentication, real-time input parsing, and stream buffering
+
+## Outcome
+
+Built a complete client that connects to the Hollomon game server, logs in with credentials, receives and stores cards, and prepares users for further gameplay actions. This project sharpened my skills in low-level Java networking, stream handling, and interactive protocol design.
+
+---
+
+This project demonstrates my ability to build secure, networked Java applications that interact with live servers using custom protocols.

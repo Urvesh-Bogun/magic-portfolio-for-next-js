@@ -1,0 +1,48 @@
+---
+title: "Deploying a SIEM on Azure"
+publishedAt: "2024-09-25"
+summary: "Built a full Security Incidents and Events Manager (SIEM) setup using Azure Log Analytics and Microsoft Sentinel to monitor a custom virtual machine and trigger real-time security alerts."
+images:
+team:
+  - name: "John Doe"
+    role: "Software Engineer"
+    myavatar: "/images/myavatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+link: 
+---
+
+## Overview
+
+This project involved deploying a lightweight SIEM (Security Information and Event Management) system using Microsoft Sentinel on Azure. The goal was to monitor activity on a virtual machine and receive real-time alerts.
+
+## Key Features
+
+- **Virtual Machine Setup**: Deployed and hardened a Linux-based VM on Azure for testing monitoring and alerting use cases.
+- **Azure Log Analytics Integration**: Connected the VM to an Azure Log Analytics workspace to ingest log data.
+- **Microsoft Sentinel Configuration**: Enabled Sentinel on the workspace to gain access to SIEM features including workbooks, analytics, and incident tracking.
+- **Custom Alert Rules**: Created alert rules that trigger notifications on specified events — e.g., successful SSH logins.
+
+## Technologies Used
+
+- **Microsoft Azure**
+
+- **Azure Log Analytics Workspace**
+
+- **Linux Virtual Machine**
+
+- **Kusto Query Language (KQL)** for writing detection rules
+
+
+## Challenges and Learnings
+
+Initially, the laptop in my network wasn’t receiving an IP address. After checking the DHCP settings on the server, I realised the IP address didn’t match the router’s subnet. This stopped IP allocation.
+
+I resolved the issue by updating the DHCP pool to match the router's network range and restarting the DHCP service. After this fix, all devices received valid IP addresses.
+
+## Outcome
+
+Successfully built a working SIEM setup that can monitor real-world virtual machines and raise alerts on key events.
+
+---
+
+This project demonstrates my ability to understanding of security monitoring, threat detection, and how SIEM platforms work in a practical cloud environment.

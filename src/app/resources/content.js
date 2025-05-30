@@ -55,7 +55,7 @@ const home = {
   },
   subline: (
     <>
-      Hi. I'm Urvesh Bogun, it's nice to meet you.
+      Hi, I'm Urvesh Bogun. It's nice to meet you.
     </>
   ),
 };
@@ -140,7 +140,7 @@ const about = {
           "Applications of Cryptography",
           "Critical Infrastructure Security",
           "Computer and Network Security",
-          "Digital Forensics",
+          "Internet Services",
         ],
       },
     ],
