@@ -1,0 +1,54 @@
+---
+title: "Cloud Security in Critical Infrastructure: Benefits, Risks, and Lessons"
+summary: "An overview of how cloud technologies can both strengthen and challenge critical infrastructure security, with real-world case studies and mitigation strategies."
+image: "/images/blog/cisp-pic.jpg"
+publishedAt: "2025-04-03"
+tag: ["Cloud Security & Critical Infrastructures"]
+---
+
+## Introduction
+
+As governments and organisations modernise public services, many are turning to the cloud to manage critical infrastructure — the systems that provide water, electricity, transport, and more. Cloud technologies offer powerful tools for resilience, scalability, and real-time threat detection, but they also introduce unique risks such as misconfigurations, insider threats, and accountability gaps.
+
+In this post, I summarise findings from a literature review I conducted exploring how cloud computing enhances — and complicates — critical infrastructure security.
+
+## Benefits of Using the Cloud for Critical Infrastructure Security
+
+Cloud providers like AWS and Azure offer purpose-built services that strengthen core infrastructure:
+
+- Real-time threat detection using AI (Joyce, 2024)
+
+- Elastic scalability during high-traffic events or DDoS attacks (van Niekerk & Jacobs, 2013)
+
+- Centralised visibility via tools like AWS GuardDuty or Microsoft Defender
+
+These capabilities improve operational uptime and reduce the burden on human operators. For instance, AWS Shield automatically detects and mitigates DDoS attacks without requiring manual intervention — something that’s hard to match in traditional on-prem setups.
+
+## Security Threats in the cloud environment
+
+However, cloud adoption isn’t without its risks:
+
+- Misconfiguration is the #1 cause of breaches (SentinelOne, 2024)
+
+- The Capital One breach (2019) was caused by a misconfigured Web Application Firewall, exploited by a former AWS employee (Khan et al., 2022)
+
+- Shared responsibility confusion leaves some users unaware of what they’re actually responsible for
+
+There’s also concern over accountability: if something goes wrong, is the cloud provider liable? What if SLAs aren't well defined?
+
+## 3. Mitigation strategies
+
+To counter these risks, the literature supports a layered approach:
+
+- Zero Trust Architecture (ZTA): assume breach, enforce least privilege, and require identity-based access (NIST, 2020)
+
+- Cloud Security Posture Management (CSPM) tools like Azure Defender help detect misconfigurations early
+
+- Hybrid security models combine the resilience of cloud with the control of on-prem infrastructure
+
+The Colonial Pipeline ransomware attack is a perfect case study: although it hit on-prem systems, the exploited flaws — like lack of MFA — are just as relevant in the cloud (Imprivata, 2022).
+
+## Conclusion
+
+The cloud offers incredible advantages for securing critical infrastructure — but only if organisations understand the tradeoffs and build layered defences. Future research should explore how real-world hybrid environments perform, and which governance frameworks help prevent failures like Capital One or Colonial Pipeline.
+
