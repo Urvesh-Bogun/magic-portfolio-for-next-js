@@ -134,7 +134,7 @@ export default function About() {
                 <Icon paddingLeft="12" name="fileText" onBackground="brand-weak" />
                 <Flex paddingX="8">View Resume</Flex>
                 <IconButton
-                  href="/UrveshBogun.pdf"
+                  href="/images/UrveshBogun.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-border="rounded"
