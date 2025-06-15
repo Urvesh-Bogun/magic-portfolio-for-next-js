@@ -8,46 +8,43 @@ tag: ["Cloud Security & Critical Infrastructures"]
 
 ## Introduction
 
-As governments increasingly rely on technology to facilitate public services, security of critical infrastructure becomes a priority.
-In this post, I summarise a literature review I wrote, in which I explore how migration to the cloud acts as both an enhancement and a risk to critical infrastructures.
+As governments rely more heavily on technology to deliver public services, securing critical infrastructure has become a top priority. In this post, I summarise a literature review I conducted, looking at how migrating to the cloud introduces both benefits and risks for critical systems.
 
 ## Benefits of Using the Cloud for Critical Infrastructure Security
 
-Cloud providers like AWS and Azure offer services that can help improve the security posture of critical infrastructures:
+Cloud providers like AWS and Azure offer services that can help improve the security posture of critical infrastructures through:
 
 - [Real-time threat detection using AI](https://cloudmonitor.ai/2024/11/how-ai-powered-cloud-monitoring-helps-prevent-downtime-and-data-loss/)
 
-- [Elastic scalability during high-traffic events or DDoS attacks](https://ieeexplore.ieee.org/document/6707515?arnumber=6707515)
+- [Elastic scalability for traffic spikes](https://ieeexplore.ieee.org/document/6707515?arnumber=6707515)
 
-- [Real-time visibility and misconfiguration detection tools like AWS GuardDuty](https://www.cloudoptimo.com/blog/aws-guardduty-advanced-threat-detection-for-cloud-security/)
+- [Tools like AWS GuardDuty that help detect misconfigurations and improve visibility](https://www.cloudoptimo.com/blog/aws-guardduty-advanced-threat-detection-for-cloud-security/)
 
-These benefits increase uptime and reduce the workload on staff by utilising cloud automation and workflows.
+These benefits increase uptime and reduce the workload on staff by automating security tasks.
 
 ## Security Threats in the cloud environment
 
-However, cloud adoption also has its fair share of risks:
+However, cloud adoption also has its downsides:
 
-- [Misconfiguration is the #1 cause of breaches in the cloud](https://www.sentinelone.com/cybersecurity-101/cloud-security/cloud-security-statistics/#cloud-misconfigurations-statistics)
+- [Misconfigurations are the leading cause of cloud breaches](https://www.sentinelone.com/cybersecurity-101/cloud-security/cloud-security-statistics/#cloud-misconfigurations-statistics)
 
-- [The Capital One breach (2019) was caused by a misconfigured Web Application Firewall, exploited by a former AWS employee](https://dl.acm.org/doi/10.1145/3546068)
+- [The 2019 Capital One breach involved a former AWS employee exploiting a misconfigured firewall](https://dl.acm.org/doi/10.1145/3546068)
 
-- [Shared responsibility confusion leaves some users unaware of thier security responsibilities](https://dl.acm.org/doi/10.1145/3546068)
+- [The shared responsibility model can lead to confusion over who’s responsible for what](https://dl.acm.org/doi/10.1145/3546068)
 
-If something goes wrong, is the cloud provider liable? What if SLAs aren't well defined?
+If something goes wrong, who’s to blame? What happens if the service level agreements (SLAs) aren’t clearly defined?
 
 ## 3. Mitigation strategies
 
-To mitigate these risks, academics supports a layered approach:
+To mitigate these risks, academics suggest using a layered approach:
 
-- [Zero Trust Architecture (ZTA): assume breach, enforce least privilege, and require identity-based access](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf)
+- [Zero Trust Architecture (ZTA): assume breach, enforce least privilege, and require fine-grained access control](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf)
 
-- [Cloud Security Posture Management (CSPM) tools like Azure Defender help detect misconfigurations early](https://www.microsoft.com/en-gb/security/business/security-101/what-is-cspm#layout-container-uid4f163)
+- [Use Cloud Security Posture Management (CSPM) tools like Azure Defender to help detect misconfigurations early](https://www.microsoft.com/en-gb/security/business/security-101/what-is-cspm#layout-container-uid4f163)
 
-- [Hybrid security models combine the resilience of cloud with the control of on-prem infrastructure](https://ieeexplore.ieee.org/document/6707515?arnumber=6707515)
-
-The [Colonial Pipeline ransomware attack](https://www.imprivata.com/uk/node/103640) is a notable case study: although it hit on-prem systems, the exploited flaws — like lack of MFA — are just as relevant in the cloud
+- [Hybrid security models combine the resilience of cloud with the control of on-prem systems](https://ieeexplore.ieee.org/document/6707515?arnumber=6707515)
 
 ## Conclusion
 
-The cloud offers significant advantages for critical infrastructure security, but only if organisations are aware prepared to mitigate the drawbacks. Future research should explore how hybrid setups perform, and deeper studies into specific critical infrastructures and the cloud.
+The cloud offers significant advantages for critical infrastructure security, but only if organisations are prepared to mitigate the drawbacks. Future research should explore how hybrid setups perform, and deeper studies into how well specific critical infrastructures work together with the cloud.
 
