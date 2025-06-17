@@ -19,9 +19,11 @@ CatCoin is a lightweight Python simulation of a blockchain — built to demonstr
 
 ## Key Features
 
-- **Block Hashing with SHA-256**: Created a network with a PC, laptop, wireless router, cable modem, and server.
-- **Chained Block Structure**: Configured DHCP and DNS for seamless network communication and automatic IP addressing.
-- **Transaction History**: Established a secure wireless network (SSID) for laptop connectivity.
+- **Block Hashing with SHA-256**: Uses SHA-256 cryptographic hashing to securely link blocks, ensuring data integrity and immutability across the blockchain.
+
+- **Chained Block Structure**: Each block contains a hash of the previous block, creating an unbreakable chain that guarantees the security and continuity of the transaction history.
+
+- **Transaction History**: Stores a complete, tamper-proof history of transactions, with each transaction being verified by the cryptographic hash of the previous block.
 
 ## Technologies Used
 
@@ -42,4 +44,4 @@ This mini-project gave me a clear, low-level understanding of blockchain fundame
 
 ---
 
-This project demonstrates my understanding of how blockchains work under the hood — without relying on any third-party libraries or frameworks.
+This project demonstrates my understanding of how blockchains work without relying on any third-party libraries or frameworks.

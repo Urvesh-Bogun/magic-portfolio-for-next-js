@@ -150,8 +150,8 @@ const about = {
     title: "Certifications",
     certificates: [
       {
-        name: "Security+",
-        issuer: "CompTIA",
+        name: "Certified Solutions Architect - Associate",
+        issuer: "AWS",
         date: "currently pursuing",
       },
       {
