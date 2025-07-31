@@ -1,6 +1,9 @@
-name: Deploy for preview
+name: Deploy
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   preview:
@@ -31,4 +34,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           target_url: https://aws-bucket.s3.ap-northeast-2.amazonaws.com/${{steps.S3.outputs.object_key}}/index.html
           state: 'success'
-          deployment_id: ${{ steps.test.outputs.deployment_id }}
