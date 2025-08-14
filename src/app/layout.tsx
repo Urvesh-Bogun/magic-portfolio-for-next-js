@@ -4,7 +4,6 @@ import "@/once-ui/tokens/index.scss";
 import classNames from "classnames";
 
 import { Footer, Header, RouteGuard } from "@/components";
-import IncrementView from '@/components/IncrementViews';
 import { baseURL, effects, style, font, home } from "@/app/resources";
 
 import { Background, Column, Flex, ThemeProvider, ToastProvider } from "@/once-ui/components";
@@ -115,7 +114,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             />
             <Flex fillWidth minHeight="16" hide="s"></Flex>
             <Header />
-            <IncrementView />
             <Flex
               zIndex={0}
               fillWidth
