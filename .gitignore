@@ -51,4 +51,10 @@ crash.log
 #
 # example.tfvars
 
-terraform/lambda/packedlambda.zip
+terraform/lambda/packedlambda.zip.terraform/
+**/.terraform/*
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+lambda/packedlambda.zip
