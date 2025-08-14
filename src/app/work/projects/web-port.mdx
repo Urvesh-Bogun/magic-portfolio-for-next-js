@@ -1,9 +1,15 @@
 ---
 title: "Secure Website Portfolio Hosted on AWS"
-publishedAt: "2024-03-13"
-summary: "A Java-based program that recommends pets using a dynamic decision tree that learns from user input."
+publishedAt: "2025-08-14"
+summary: "A security focused portfolio hosted on AWS using S3, CloudFront and Route 53, and Terrofrom to manage serverless features"
 images:
-- "/images/projects/petsuggester/header.jpg"
+  - "/images/projects/portfolio/port-1.png"
+  - "/images/projects/portfolio/port-2.png"
+  - "/images/projects/portfolio/port-3.png"
+  - "/images/projects/portfolio/port-4.png"
+  - "/images/projects/portfolio/port-5.png"
+  - "/images/projects/portfolio/port-6.png"
+  - "/images/projects/portfolio/port-7.png"
 team:
   - name: "John Doe"
     role: "Software Engineer"
@@ -14,33 +20,27 @@ link: "https://github.com/Urvesh-Bogun/pet-suggester"
 
 ## Overview
 
-
+A hardened Next.js portfolio on AWS: S3 + CloudFront, and Route 53, with a Python Lambda to update a view counter on DynamoDB, created using Terraform
 
 ## Key Features
 
-- **AWS Security Features**: Built with recursive TreeNode objects, supporting both questions and pet suggestions.
+- **AWS Security Features**: TLS via ACM, OWASP mitigation via WAF, log encryption via KMS, threat monitoring via GuardDuty, and logging via CloudTrail
 
-- **IaC**: Automatically expands its tree when the user rejects a suggestion, storing new pets and questions.
+- **IaC**: Terraform for IAM roles/policies, Lambda, DynamoDB, and outputs.
 
-- **Pyscripts**: Saves the decision tree to suggestions.txt and loads it back in future sessions.
+- **Delivery**: CI/CD with S3 sync and CloudFront cache invalidation
 
 ## Technologies Used
 
-- **AWS** to code OOP project
-
-- **Terraform** for file I/O
-
-- **GitHub Actions** for user input
-
-- **Next.js** 
+- AWS, Terraform, GitHub Actions, Next.js
 
 ## Challenges and Learnings
 
-This project was my first experience using IaC, and with that I struggled to get the right cobnfigurations for 
+This project was my first experience using IaC, resulting in being lost until I found (this helpful resource)[https://registry.terraform.io/providers/hashicorp/aws/latest/docs].
 
 ## Outcome
 
-By the end of the project, I had built a fully functional decision-making assistant in Java that evolves over time based on user feedback. It’s a simple concept, but a great demonstration of recursion, file persistence, and interactive logic in a command-line setting.
+A secure, serverless portfolio with an automated pipeline and a Lambda-powered view counter.
 
 ---
 
